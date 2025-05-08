@@ -1,30 +1,30 @@
 # PRO_Example
 Progressive Reconstruction of Off-diagonals (PRO) can be used to identify off-diagonals of the input and transmission matrices, which directly translates to recovery of spatially-varying point spread functions (PSFs). This example code demonstrates the implementation of PRO workflow on the provided example data.
 
-This is an example code to implement Progressive Reconstruction of Off-diagonals (PRO).
-The Main_Code.m script is the primary MATLAB file that sets up and runs the entire simulation and preprocessing workflow for PRO.
-When you run Main_Code.m, it performs the following:
-    -Loads and displays the target object and scattering medium data.
-    -Extracts and visualizes ground truth off-diagonal aberrations.
-    -Simulates the distorted reflection matrix.
-    -Runs the Patch-CLASS algorithm to estimate patch-wise aberrations and reconstructs the stitched image.
-    -Extracts and compares off-diagonal and PSF correlations between Patch-CLASS and ground truth data.
-    -Finally, it automatically launches the PRO GUI for the next stage of interactive PRO optimization.
+This is an example code to implement Progressive Reconstruction of Off-diagonals (PRO).  
+The Main_Code.m script is the primary MATLAB file that sets up and runs the entire simulation and preprocessing workflow for PRO.  
+When you run Main_Code.m, it performs the following:  
+    -Loads and displays the target object and scattering medium data.  
+    -Extracts and visualizes ground truth off-diagonal aberrations.  
+    -Simulates the distorted reflection matrix.  
+    -Runs the Patch-CLASS algorithm to estimate patch-wise aberrations and reconstructs the stitched image.  
+    -Extracts and compares off-diagonal and PSF correlations between Patch-CLASS and ground truth data.  
+    -Finally, it automatically launches the PRO GUI for the next stage of interactive PRO optimization.  
 
 # Directory Structure:
-\Root_Dir (named Example_Code)
-    Main_Code.m - Main execution code
-    PRO_GUI.m - Implement PRO using GUI
-    PRO.m - To implement PRO without GUI (not required if using GUI)
-    PRO_Python_Optimization.py - This has to be externally run to optimize the transfer functions and the object
-    Python_Environment.yaml - Example python enviroment
-    \Example_Data - Contains data for object, ground truth transmission matrices, and details off-diagonals
-    \Functions - Contains various functions required for PRO
-    \PreOptimized_Results_for_Each_Stage - Contains results of each stage of PRO corresponding to the example data (doesn't require use of Python).
-    \Python_Data_and_Result - This is used by PRO to store training data and optimized results from Python.
+\Root_Dir (named Example_Code)  
+    Main_Code.m - Main execution code  
+    PRO_GUI.m - Implement PRO using GUI  
+    PRO.m - To implement PRO without GUI (not required if using GUI)  
+    PRO_Python_Optimization.py - This has to be externally run to optimize the transfer functions and the object  
+    Python_Environment.yaml - Example python enviroment  
+    \Example_Data - Contains data for object, ground truth transmission matrices, and details off-diagonals  
+    \Functions - Contains various functions required for PRO  
+    \PreOptimized_Results_for_Each_Stage - Contains results of each stage of PRO corresponding to the example data (doesn't require use of Python).  
+    \Python_Data_and_Result - This is used by PRO to store training data and optimized results from Python.  
 
-NOTE: The required dataset and other files can be downloaded from https://doi.org/10.6084/m9.figshare.28953386
-Please ensure that the base folder (working directory) in MATLAB or Python is set to the same location where the main code file exists and follows the above directory scheme.
+NOTE: The required dataset and other files can be downloaded from https://doi.org/10.6084/m9.figshare.28953386  
+Please ensure that the base folder (working directory) in MATLAB or Python is set to the same location where the main code file exists and follows the above directory scheme.  
       
 # PRO GUI Usage
 After running Main_Code.m, the PRO GUI window (PRO Stage Controller) will open automatically.
